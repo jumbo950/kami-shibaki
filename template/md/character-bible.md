@@ -244,7 +244,7 @@
 
 ---
 
-## Costume Reference
+## Standard Outfit
 
 ### 基本衣装
 
