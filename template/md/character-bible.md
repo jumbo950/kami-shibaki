@@ -1,4 +1,4 @@
-# kami-shibaki-charcter Bible
+# kami-shibaki-character Bible
 
 ## Character Information
 
