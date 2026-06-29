@@ -22,7 +22,7 @@ async function initializeViewer() {
     characterNameElement.textContent = character.name;
 
     await loadBible(character.bible, bibleContentElement);
-    renderImageList(character.images, imageListElement);
+    await loadImageList(character.images, imageListElement);
     setupImageModal();
   } catch (error) {
     characterNameElement.textContent = 'Load Error';
@@ -75,14 +75,52 @@ async function loadBible(path, container) {
   }
 }
 
-function renderImageList(imagePath, container) {
+async function loadImageList(path, container) {
+  try {
+    const imageList = await fetchJson(path);
+    renderImageList(imageList, container);
+  } catch (error) {
+    container.innerHTML = '<p>Reference Imagesの読み込みに失敗しました。</p>';
+    console.error(error);
+  }
+}
+
+function renderImageList(imageList, container) {
   container.innerHTML = '';
 
-  const placeholder = document.createElement('p');
-  placeholder.textContent = 'Reference Images will be displayed here.';
-  container.appendChild(placeholder);
+  if (!imageList || !Array.isArray(imageList.images) || imageList.images.length === 0) {
+    const emptyMessage = document.createElement('p');
+    emptyMessage.textContent = 'Reference Images are not registered.';
+    container.appendChild(emptyMessage);
+    return;
+  }
 
-  container.dataset.imagePath = imagePath;
+  imageList.images.forEach((image) => {
+    if (!image || !image.path) {
+      return;
+    }
+
+    const button = document.createElement('button');
+    button.className = 'image-button';
+    button.type = 'button';
+
+    const thumbnail = document.createElement('img');
+    thumbnail.src = image.path;
+    thumbnail.alt = image.title || 'Reference Image';
+    thumbnail.loading = 'lazy';
+
+    const caption = document.createElement('span');
+    caption.textContent = image.title || image.path;
+
+    button.appendChild(thumbnail);
+    button.appendChild(caption);
+
+    button.addEventListener('click', () => {
+      openImageModal(image.path, image.title || 'Reference Image');
+    });
+
+    container.appendChild(button);
+  });
 }
 
 function setupImageModal() {
@@ -94,22 +132,42 @@ function setupImageModal() {
     return;
   }
 
-  closeButton.addEventListener('click', closeModal);
+  closeButton.addEventListener('click', closeImageModal);
 
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-      closeModal();
+      closeImageModal();
     }
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      closeModal();
+      closeImageModal();
     }
   });
+}
 
-  function closeModal() {
-    modal.setAttribute('aria-hidden', 'true');
-    modalImage.src = '';
+function openImageModal(path, title) {
+  const modal = document.getElementById('image-modal');
+  const modalImage = document.getElementById('modal-image');
+
+  if (!modal || !modalImage) {
+    return;
   }
+
+  modalImage.src = path;
+  modalImage.alt = title;
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeImageModal() {
+  const modal = document.getElementById('image-modal');
+  const modalImage = document.getElementById('modal-image');
+
+  if (!modal || !modalImage) {
+    return;
+  }
+
+  modal.setAttribute('aria-hidden', 'true');
+  modalImage.src = '';
 }
