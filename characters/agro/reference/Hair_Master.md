@@ -24,6 +24,14 @@ Hair_Masterは、画風・モデル・角度が変化しても「あぐろ」と
 - 自然な毛先
 - 後ろ姿でも同一人物と分かるボブシルエット
 
+## Bob Silhouette Consistency
+
+ショートボブの丸いシルエットは、風になびいた場合でも維持される。
+
+後頭部だけ縦長にならないこと。
+
+耳へ自然に掛かる毛束を維持する。
+
 ## Front Hair
 
 - 薄めの前髪
@@ -98,6 +106,9 @@ Hair_Masterは、画風・モデル・角度が変化しても「あぐろ」と
 - 人工的なセンターパート
 - 左右非対称の後頭部
 - 金属的な髪ハイライト
+- 風や動きによってボブの丸みが崩れること
+- 後頭部だけ縦長になること
+- 耳掛けした毛束が消えること
 
 ## Prompt Keywords
 
@@ -110,13 +121,13 @@ short rounded bob haircut, chin-length bob, straight bob, blunt bob with soft ed
 ### Stability Keywords
 
 ```text
-same hairstyle, same bob silhouette, same hair length, rounded bob, natural hair flow, maintain hair silhouette, clean short bob, consistent back view hair shape
+same hairstyle, same bob silhouette, same hair length, rounded bob, natural hair flow, maintain hair silhouette, clean short bob, consistent back view hair shape, maintain rounded bob silhouette in motion
 ```
 
 ### Negative Keywords
 
 ```text
-long hair, ponytail, twin tails, bun, curly hair, heavy curls, flipped hair ends, outward curl, inward curl, messy hair, asymmetrical haircut, wet hair, metallic hair shine, artificial center part
+long hair, ponytail, twin tails, bun, curly hair, heavy curls, flipped hair ends, outward curl, inward curl, messy hair, asymmetrical haircut, wet hair, metallic hair shine, artificial center part, elongated back hair, distorted bob silhouette
 ```
 
 ## Generation Rule
@@ -124,3 +135,5 @@ long hair, ponytail, twin tails, bun, curly hair, heavy curls, flipped hair ends
 常に丸いショートボブ、あごライン基準の長さ、自然な流し前髪、後頭部の丸み、自然な毛先、ライトブラウンを維持する。
 
 顔の9面図を参照した生成では、正面・斜め・側面・背面のすべてで同じ髪型として見えることを優先する。
+
+風・動き・ポーズがある場合でも、丸いショートボブの基本シルエットと耳へ自然に掛かる毛束を維持する。
