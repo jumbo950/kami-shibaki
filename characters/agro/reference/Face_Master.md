@@ -100,6 +100,22 @@
 
 ---
 
+## Eye Detail
+
+左目アップ資料をCanonical Eye Referenceとする。
+
+以下を維持する。
+
+- 虹彩はアンバーを基調とし、中心から外周へ自然なグラデーションを持つ
+- 虹彩内にルビー系の暖色を含める
+- 瞳孔周辺はやや濃く、立体感を持たせる
+- ハイライトは複数配置し、明るく生き生きした印象を維持する
+- アイラインは細く自然
+- 睫毛は長すぎず、上まつ毛をやや強調する
+- 白目は純白ではなく自然な明度とする
+
+---
+
 ## Expression Standard
 
 ### 標準表情
@@ -158,6 +174,27 @@
 
 ---
 
+## Multi-angle Face Rule
+
+顔は以下すべての角度で同一人物として認識できること。
+
+- 正面
+- 左右45°
+- 左右側面
+- 見上げ
+- 見下ろし
+- 後頭方向
+
+角度によって以下を別人化させない。
+
+- 顔幅
+- 顎形状
+- 鼻
+- 目の大きさ
+- 眼鏡の印象
+
+---
+
 ## Accessories Around Face
 
 ### ピアス
@@ -175,6 +212,13 @@
 - 小さめのティアドロップ型
 - ゴールドチェーン
 - 顔の印象を邪魔しないサイズ
+
+### Accessory Placement
+
+- ピアスは耳たぶ中央よりやや下から垂れる
+- ピアスは左右とも同じ長さ
+- ネックレスは鎖骨中央付近へ自然に配置する
+- アクセサリーは顔認識を妨げない
 
 ---
 
@@ -214,13 +258,13 @@ Kamishibaki Agro, 24-year-old woman, friendly older sister face, soft rounded fa
 ### Face Stability Keywords
 
 ```text
-same face, same character, consistent face design, soft facial outline, rounded cheeks, small natural nose, warm amber eyes, red glasses, fixed beauty mark under left eye
+same face, same character, consistent face design, soft facial outline, rounded cheeks, small natural nose, warm amber eyes, red glasses, fixed beauty mark under left eye, consistent face from all angles
 ```
 
 ### Negative Keywords
 
 ```text
-no glasses, missing glasses, black glasses, transparent glasses, missing beauty mark, mole on wrong side, sharp chin, narrow face, child face, expressionless, cold eyes, sleepy eyes, realistic nose, photorealistic face, different face
+no glasses, missing glasses, black glasses, transparent glasses, missing beauty mark, mole on wrong side, sharp chin, narrow face, child face, expressionless, cold eyes, sleepy eyes, realistic nose, photorealistic face, different face, inconsistent face angles
 ```
 
 ---
@@ -237,5 +281,6 @@ no glasses, missing glasses, black glasses, transparent glasses, missing beauty 
 4. 柔らかい丸みのある顔型
 5. やや口を開けた親しみやすい笑顔
 6. 24歳相応の若々しいが幼すぎない印象
+7. どの角度でも同一人物として認識できる顔バランス
 
-この6点が崩れた場合、その画像は上柴木あぐろとして不採用とする。
+この7点が崩れた場合、その画像は上柴木あぐろとして不採用とする。
