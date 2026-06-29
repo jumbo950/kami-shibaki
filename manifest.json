@@ -1,0 +1,22 @@
+{
+  "characters": [
+    {
+      "id": "agro",
+      "name": "上柴木あぐろ",
+      "bible": "characters/agro/bible.md",
+      "images": "images/character/agro/"
+    },
+    {
+      "id": "midore",
+      "name": "上柴木みどれ",
+      "bible": "characters/midore/bible.md",
+      "images": "images/character/midore/"
+    },
+    {
+      "id": "roll",
+      "name": "上柴木ろおる",
+      "bible": "characters/roll/bible.md",
+      "images": "images/character/roll/"
+    }
+  ]
+}
