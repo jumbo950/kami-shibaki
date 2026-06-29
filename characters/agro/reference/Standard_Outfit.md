@@ -1,6 +1,7 @@
 # 上柴木あぐろ Standard Outfit
 
-> このファイルは、上柴木あぐろの標準業務服再現用マスター仕様です。
+> このファイルは、上柴木あぐろの標準業務服再現用マスター仕様です。  
+> 本ファイルは、Standard Outfitのうち「ジャケット着用状態」を中心に管理します。ジャケット非着用・手持ち状態は `Standard_Outfit_No_Jacket.md` で管理します。
 
 ## Purpose
 
@@ -23,25 +24,36 @@ Business Outfit生成時は本仕様を最優先とする。
 
 ## Jacket Wearing Rule
 
-Business Outfitではジャケットは着脱可能とする。
+Standard Outfitでは、ジャケット状態は必ず以下のいずれか一つとする。
 
-以下2パターンをCanonicalとする。
+- Jacket Wearing
+- Jacket Carrying / No Jacket
+
+本ファイルでは Jacket Wearing をCanonical Stateとして扱う。
+
+Jacket Carrying / No Jacket は `Standard_Outfit_No_Jacket.md` で管理する。
 
 ### Wearing
 
-- ジャケット着用
-- 通常配信
+- ジャケットを着用する
+- ジャケットは手に持たない
 - 通勤
 - 業務中
+- 通常配信
+- オフィス
 
-### Carrying
+### Exclusive Rule
 
-- ジャケットを片腕に掛ける
-- 室内
-- 退勤
-- 移動シーン
+Wearing と Carrying は排他的である。
 
-どちらもStandard Outfitとして扱う。
+以下は禁止。
+
+- ジャケットを着用したまま手に持つ
+- ジャケットを肩へ掛けたまま着用する
+- ジャケットを背負う
+- 着用と手持ちを同時に表現する
+
+常に Wearing または Carrying のどちらか一方のみとする。
 
 ## Jacket
 
@@ -220,13 +232,23 @@ Business OutfitではBody_Masterを隠さない。
 - ウエスト位置
 - ヒップ位置
 
+## Variant
+
+Standard Outfitには以下の派生状態が存在する。
+
+- Jacket Wearing（本仕様）
+- Jacket Carrying / No Jacket（`Standard_Outfit_No_Jacket.md`）
+
 ## NG
 
 - 白シャツへ変更
 - スーツ色変更
 - スカート
 - パンツ丈変更
-- ジャケットなし固定
+- ジャケットを着用したまま手に持つ
+- ジャケットを肩へ掛けたまま着用する
+- ジャケットを背負う
+- 着用と手持ちを同時に表現する
 - 社員証なし
 - ベルトなし
 - パンプス以外
