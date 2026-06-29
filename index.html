@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kami Shibaki Character Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="character-name">Character Bible</h1>
+  </header>
+
+  <main class="viewer">
+    <section class="bible-section">
+      <h2>Character Bible</h2>
+      <article id="bible-content" class="bible-content">
+        <p>Loading...</p>
+      </article>
+    </section>
+
+    <section class="reference-section">
+      <h2>Reference Images</h2>
+      <div id="image-list" class="image-list"></div>
+    </section>
+  </main>
+
+  <div id="image-modal" class="image-modal" aria-hidden="true">
+    <button id="modal-close" class="modal-close" type="button">×</button>
+    <img id="modal-image" class="modal-image" src="" alt="Reference Image">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
