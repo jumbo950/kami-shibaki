@@ -4,19 +4,19 @@
       "id": "agro",
       "name": "上柴木あぐろ",
       "bible": "characters/agro/bible.md",
-      "images": "images/character/agro/"
+      "images": "images/character/agro/images.json"
     },
     {
       "id": "midore",
       "name": "上柴木みどれ",
       "bible": "characters/midore/bible.md",
-      "images": "images/character/midore/"
+      "images": "images/character/midore/images.json"
     },
     {
       "id": "roll",
       "name": "上柴木ろおる",
       "bible": "characters/roll/bible.md",
-      "images": "images/character/roll/"
+      "images": "images/character/roll/images.json"
     }
   ]
 }
