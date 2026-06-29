@@ -50,6 +50,14 @@
 - 眼鏡は顔の中心印象を作る重要パーツとして扱う
 - 透明フレーム・黒縁・眼鏡なしは禁止
 
+### Glasses Consistency
+
+赤系アンダーフレーム眼鏡は、あぐろを識別する重要な特徴である。
+
+正面・斜め・側面すべてで、アンダーフレームであることが分かること。
+
+全縁眼鏡へ変化してはならない。
+
 ### 泣きぼくろ
 
 - 左目下に小さな泣きぼくろを必ず配置する
@@ -57,6 +65,12 @@
 - 大きすぎず、黒点として自然に見える程度
 - 右目下に移動させない
 - 省略しない
+
+### Beauty Mark Priority
+
+左目下の泣きぼくろは、表情・角度・ライティングが変化しても可能な限り視認できること。
+
+顔アップ資料を作成する場合は、同一人物性を保った資料から切り出すこと。
 
 ### 口
 
@@ -230,6 +244,8 @@
 - 黒縁眼鏡
 - 透明眼鏡
 - 丸すぎるギャグ眼鏡
+- 全縁眼鏡への変化
+- アンダーフレームが判別できない眼鏡
 - 泣きぼくろ欠落
 - 泣きぼくろが右目下に移動
 - ロングヘア化による顔印象の変化
@@ -258,13 +274,13 @@ Kamishibaki Agro, 24-year-old woman, friendly older sister face, soft rounded fa
 ### Face Stability Keywords
 
 ```text
-same face, same character, consistent face design, soft facial outline, rounded cheeks, small natural nose, warm amber eyes, red glasses, fixed beauty mark under left eye, consistent face from all angles
+same face, same character, consistent face design, soft facial outline, rounded cheeks, small natural nose, warm amber eyes, red glasses, fixed beauty mark under left eye, consistent face from all angles, visible red under-rim glasses, visible beauty mark under left eye
 ```
 
 ### Negative Keywords
 
 ```text
-no glasses, missing glasses, black glasses, transparent glasses, missing beauty mark, mole on wrong side, sharp chin, narrow face, child face, expressionless, cold eyes, sleepy eyes, realistic nose, photorealistic face, different face, inconsistent face angles
+no glasses, missing glasses, black glasses, transparent glasses, full-rim glasses, missing under-rim glasses, missing beauty mark, mole on wrong side, sharp chin, narrow face, child face, expressionless, cold eyes, sleepy eyes, realistic nose, photorealistic face, different face, inconsistent face angles
 ```
 
 ---
